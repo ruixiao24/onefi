@@ -12,12 +12,12 @@ def parse_args(script):
         parser.add_argument('--n_class', default=300, type=int, help='total number of classes in softmax')    
         parser.add_argument('--batch_sz', default=64, help='batch size')
         parser.add_argument('--lr', default=0.0001, help='learning rate')
-        parser.add_argument('--dataset_sz', default=20*12*30, help='dataset size')
+        parser.add_argument('--dataset_sz', default=2*12*3, help='dataset size')
         parser.add_argument('--train_ratio', default=0.9, help='ratio of samples for train')
     elif script == 'test':
         parser.add_argument('--n_way', default=6, help='n way')
         parser.add_argument('--k_shot', default=1, help='k shot')
-        parser.add_argument('--k_query', default=1, help='k query')
+        parser.add_argument('--k_query', default=10, help='k query')
     return parser.parse_args()
 
 

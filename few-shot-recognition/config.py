@@ -1,2 +1,2 @@
-save_dir = './few-shot-recognition/' # path for model checkpoint
+save_dir = '.' # path for model checkpoint
 data_dir = './data' # path for train data and test data

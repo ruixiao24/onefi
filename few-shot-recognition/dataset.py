@@ -12,9 +12,9 @@ class AugmentSet(Dataset):
         self.data = torch.from_numpy(np.load(self.path)).float()
         
         # obtain dataset params
-        self.n_action = 20
+        self.n_action = 2 #20
         self.n_orientation = 12
-        self.n_trial = 30
+        self.n_trial = 3 #30
 
         self.n_class = self.n_action * self.n_orientation
         self.len = self.n_class * self.n_trial
@@ -88,7 +88,7 @@ class TestSet():
         x_spt = np.transpose(x_spt, (2, 0, 1))
         x_qry = np.transpose(x_qry, (2, 0, 1))
 
-        x_spt, y_spt, x_qry, y_qry = torch.from_numpy(x_spt), torch.from_numpy(y_spt), \
-                                     torch.from_numpy(x_qry), torch.from_numpy(y_qry)
+        x_spt, y_spt, x_qry, y_qry = torch.from_numpy(x_spt), torch.from_numpy(y_spt).long(), \
+                                     torch.from_numpy(x_qry), torch.from_numpy(y_qry).long()
 
         return x_spt, y_spt, x_qry, y_qry
