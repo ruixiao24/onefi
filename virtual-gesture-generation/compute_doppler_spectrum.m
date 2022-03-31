@@ -13,7 +13,7 @@ function [doppler_spectrum, freq_bin] = compute_doppler_spectrum(spfx_ges, shift
         shift = true;
     end
     
-    if nargin == 2
+    if nargin == 1
         shift = false;
     end
     
